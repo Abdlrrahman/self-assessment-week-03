@@ -7,17 +7,15 @@ angular.module('fish-pond')
 })
 .component('fishTableRow', {
   bindings: {
-    fish: '<',
-    description: '<',
-    image: '<'
+    fish: '<'
   },
   controller: 'FishTableCtrl',
   template: `
     <div ng-click="$ctrl.toggleDescription()">
-      <span class="fish-name" ng-repeat="fis in fish">{{ fis }}</span>
+      <span class="fish-name">{{ $ctrl.fish.name }}</span>
       <span>
-        <img ng-repeat="img in image" src={{ img }} />
+        <img src={{ $ctrl.fish.image }} />
       </span>
-      <span class="fish-description" ng-repeat="des in description" ng-if="des in description">{{ des }}</span>
+      <span class="fish-description" ng-if="$ctrl.showDescription">{{  $ctrl.fish.description }}</span>
     </div>`
 });
