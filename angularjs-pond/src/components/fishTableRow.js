@@ -12,10 +12,10 @@ angular.module('fish-pond')
   controller: 'FishTableCtrl',
   template: `
     <div ng-click="$ctrl.toggleDescription()">
-      <span class="fish-name">{{ $ctrl.fish.name }}</span>
+      <span class="fish-name">{{ fish.name }}</span>
       <span>
-        <img src={{ $ctrl.fish.image }} />
+        <img src="{{ fish.image }}" />
       </span>
-      <span class="fish-description" ng-if="$ctrl.showDescription">{{  $ctrl.fish.description }}</span>
+      <span class="fish-description" ng-if="$ctrl.showDescription">{{  fish.description }}</span>
     </div>`
 });
