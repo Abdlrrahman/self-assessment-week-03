@@ -14,7 +14,7 @@ angular.module('fish-pond')
     <div ng-click="$ctrl.toggleDescription()">
       <span class="fish-name" name='$ctrl.fish.name'>{{ name }}</span>
       <span>
-        <img img='$ctrl.fish.image' src="{{ img }}" />
+        <img img='$ctrl.fish.image' src={{ img }} />
       </span>
       <span class="fish-description" description='$ctrl.fish.description' ng-if="$ctrl.showDescription">{{  description }}</span>
     </div>`
